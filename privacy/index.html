@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How the dotfiles personal backup client accesses, uses, stores, and retains Google Drive data.">
+  <title>Privacy policy — dotfiles</title>
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="../">dotfiles</a>
+    <nav aria-label="Main navigation"><a href="../">Home</a><a href="./" aria-current="page">Privacy policy</a></nav>
+  </header>
+  <main id="main">
+    <p class="eyebrow">Data handling</p>
+    <h1>Privacy policy</h1>
+    <p class="lead" lang="de">Datenschutzerklärung für die persönliche Anwendung „dotfiles“.</p>
+    <p class="updated">Last updated: <time datetime="2026-10-23">23 October 2026</time></p>
+    <section aria-labelledby="operator">
+      <h2 id="operator">Application and owner</h2>
+      <p>dotfiles is a personal command-line laptop backup client maintained by <a href="https://github.com/Zzerr0r">Zzerr0r</a>. It is used by the owner with the owner's own Google account. This policy describes the backup client and this informational website.</p>
+    </section>
+    <section aria-labelledby="google-data">
+      <h2 id="google-data">Google data accessed</h2>
+      <p>The client requests the Google Drive <code>https://www.googleapis.com/auth/drive.file</code> OAuth scope. It creates and manages its own backup objects and reads their contents and metadata when listing, checking, or restoring backups. Operations include creating, reading, updating, and deleting these objects as required for backup storage and repository maintenance.</p>
+      <p>The client does not request Gmail or contact permissions and does not request broad access to unrelated existing Drive documents.</p>
+    </section>
+    <section aria-labelledby="use">
+      <h2 id="use">Purpose and use</h2>
+      <p>Google Drive data is used only to store, verify, manage, and restore the owner's encrypted recovery snapshots. It is not used for advertising, profiling, analytics, sale, or training machine-learning models.</p>
+    </section>
+    <section aria-labelledby="storage">
+      <h2 id="storage">Storage and security</h2>
+      <p>Source files are read on the owner's computer. Restic encrypts backup content and repository metadata locally before rclone uploads them to Google Drive over HTTPS. Decryption happens on the owner's computer using the backup password.</p>
+      <p>OAuth credentials are stored in a restricted local configuration file and are included only inside the encrypted recovery backup. The backup password is stored separately on the owner's computer and in an offline recovery copy; it is not uploaded as plaintext or published on this website.</p>
+      <p>Google still processes account, connection, storage, and object information required to provide Google Drive. Google's own processing is described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+    </section>
+    <section aria-labelledby="sharing">
+      <h2 id="sharing">Sharing</h2>
+      <p>The application transfers encrypted backup objects to the owner's Google Drive account. It has no separate service backend that receives plaintext backup content and does not intentionally share backup content with other users or third-party services.</p>
+    </section>
+    <section aria-labelledby="retention">
+      <h2 id="retention">Retention and deletion</h2>
+      <p>Recovery snapshots remain in the owner's Drive account until the owner deletes them. Automatic snapshot expiration is not configured. The owner controls deletion through restic repository maintenance or by removing the backup repository from Drive. Deletion and retention within Google's services are subject to Google's applicable settings and policies.</p>
+    </section>
+    <section aria-labelledby="authorization">
+      <h2 id="authorization">Revoke authorization</h2>
+      <p>The owner can remove this client's access through <a href="https://myaccount.google.com/connections">Google Account third-party connections</a>. Revoking access stops the client from accessing Drive through that authorization. It does not itself delete existing encrypted backup files.</p>
+    </section>
+    <section aria-labelledby="website">
+      <h2 id="website">This website</h2>
+      <p>This site is hosted by GitHub Pages. It contains no application login, upload form, analytics scripts, advertising, or application-set cookies. GitHub may process connection information needed to host and protect the site under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</p>
+    </section>
+    <section aria-labelledby="contact">
+      <h2 id="contact">Contact and changes</h2>
+      <p>For questions, contact the project owner through the <a href="https://github.com/Zzerr0r">GitHub profile</a>. This page will be updated if the application's data handling changes.</p>
+    </section>
+  </main>
+  <footer><a href="../">dotfiles home</a><span>Personal use</span></footer>
+</body>
+</html>

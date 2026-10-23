@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="dotfiles is a personal tool for storing and restoring encrypted laptop recovery backups in its owner's Google Drive account.">
+  <title>dotfiles — personal laptop recovery</title>
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="./" aria-current="page">dotfiles</a>
+    <nav aria-label="Main navigation"><a href="privacy/">Privacy policy</a></nav>
+  </header>
+  <main id="main">
+    <p class="eyebrow">Personal laptop recovery</p>
+    <h1>dotfiles</h1>
+    <p class="lead">Encrypted recovery backups, stored in the owner's own Google Drive account.</p>
+    <section aria-labelledby="about">
+      <h2 id="about">What this application does</h2>
+      <p>dotfiles is a personal command-line backup and restore tool. It preserves selected laptop recovery files in encrypted snapshots and can restore them when the owner replaces a computer.</p>
+      <p>It uses <a href="https://restic.net/">restic</a> to encrypt backup content locally and <a href="https://rclone.org/">rclone</a> to transfer the encrypted objects to Google Drive. This website provides information about the application; it does not upload or restore backups.</p>
+    </section>
+    <section aria-labelledby="access">
+      <h2 id="access">Google account access</h2>
+      <p>The owner authorizes a Google Desktop OAuth client with the <code>drive.file</code> permission. The application uses this permission to manage the backup files it creates. It does not request access to Gmail, contacts, or unrelated existing Drive documents.</p>
+      <p>This application is for its owner's personal use. It does not offer public account registration.</p>
+    </section>
+    <section class="callout" aria-labelledby="privacy">
+      <h2 id="privacy">Data handling</h2>
+      <p>Backup content is encrypted before upload. The encryption password remains with the owner. See the <a href="privacy/">privacy policy / Datenschutzerklärung</a> for access, storage, retention, and authorization details.</p>
+    </section>
+    <section aria-labelledby="contact">
+      <h2 id="contact">Project owner</h2>
+      <p>Maintained by <a href="https://github.com/Zzerr0r">Zzerr0r on GitHub</a>. Questions about the application can be directed to the owner through GitHub.</p>
+    </section>
+  </main>
+  <footer><span>dotfiles · Personal use</span><a href="privacy/">Privacy policy</a></footer>
+</body>
+</html>
